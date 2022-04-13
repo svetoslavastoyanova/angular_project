@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "reciepes-project": {
+      "hosting": {
+        "recipes": [
+          "reciepes-project"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "reciepes-project"
+  }
+}
