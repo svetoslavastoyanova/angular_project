@@ -13,4 +13,4 @@ export const environment = {
 };
 
 
-export const databasePath = 'https://reciepes-project-default-rtdb.firebaseio.com/recipes'
+//export const databasePath = 'https://reciepes-project-default-rtdb.firebaseio.com/recipes'

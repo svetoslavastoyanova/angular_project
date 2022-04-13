@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
 import { forkJoin } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import { UsersService } from '../../services/user.service';
 
 export function passwordsMatchValidator(): ValidatorFn {

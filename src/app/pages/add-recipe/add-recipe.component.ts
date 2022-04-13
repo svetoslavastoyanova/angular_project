@@ -22,7 +22,7 @@ export class AddRecipeComponent implements OnInit {
     photoURL: new FormControl('', [Validators.required, Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')]),
     name: new FormControl('', [Validators.required, Validators.minLength(2)]),
     ingredients: new FormControl('', Validators.required),
-    description: new FormControl('', [Validators.required, Validators.minLength(50)]),
+    description: new FormControl('', [Validators.required, Validators.minLength(10)]),
     user: new FormControl('', Validators.required)
   });
 

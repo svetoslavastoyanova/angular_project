@@ -1,4 +1,7 @@
-<div class="form-container mat-elevation-z5 text-center" *ngIf="user$ | async as user; else loading">
+<div
+  class="form-container mat-elevation-z5 text-center"
+  *ngIf="user$ | async as user"
+>
   <h1>Update Profile</h1>
   <div class="profile-image">
     <img
@@ -42,15 +45,12 @@
           placeholder="Display Name"
         />
       </mat-form-field>
+
     </div>
-    
+
 
     <button type="submit" class="margin-top" mat-raised-button color="primary">
       Save
     </button>
   </form>
 </div>
-
-<ng-template #loading>
-  Loading stuff...
-</ng-template>

@@ -2,7 +2,7 @@
 <div class="form-container mat-elevation-z1" *ngIf="user$ | async as user">
     <form #addForm="ngForm" (ngSubmit)="submit()" [formGroup]="createForm">
       <div *ngIf="!submitted">
-        <h2 class="center">Add new pet</h2>
+        <h2 class="center">Add new recipe</h2>
         <mat-form-field>
           <input formControlName="photoURL" matInput placeholder="Photo URL" type="text">
           <mat-error *ngIf="photoURL?.errors?.['required']">Photo URL is required!</mat-error>
@@ -15,8 +15,8 @@
         </mat-form-field>
         
         <mat-form-field>
-          <input formControlName="breed" matInput placeholder="Breed" type="text">
-          <mat-error *ngIf="ingredients?.errors?.['required']">Breed is required!</mat-error>
+          <input formControlName="ingredients" matInput placeholder="Ingredients" type="text">
+          <mat-error *ngIf="ingredients?.errors?.['required']">Ingredients is required!</mat-error>
         </mat-form-field>
         <mat-form-field>
           <input formControlName="description" matInput placeholder="Description" type="text">
@@ -24,17 +24,17 @@
           <mat-error *ngIf="description?.errors">Description should be at least 50 characters!</mat-error>
         </mat-form-field>
 
-        <button color="primary" mat-raised-button type="submit"><mat-icon>pets</mat-icon>Add pet</button>
+        <button color="primary" mat-raised-button type="submit"><mat-icon>recipe</mat-icon>Add recipe</button>
       </div>
       <div *ngIf="submitted">
-        <h6 class="center">You've added this pet successfully!</h6>
+        <h6 class="center">You've added this recipe successfully!</h6>
         <div class="flex-btns">
           <button (click)="newRecipe(); addForm.resetForm()" color="primary" mat-raised-button>
             Add another one
           </button>
           <span class="center">or</span>
           <button routerLink="/home" color="primary" mat-raised-button>
-            Browse all pets
+            Browse all recipes
           </button>
         </div>
       </div>
