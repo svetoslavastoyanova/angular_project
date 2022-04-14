@@ -19,11 +19,11 @@ export class AddRecipeComponent implements OnInit {
   submitted = false;
 
   createForm = new FormGroup({
-    photoURL: new FormControl('', [Validators.required, Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')]),
+    photoURL: new FormControl(''),
     name: new FormControl('', [Validators.required, Validators.minLength(2)]),
     ingredients: new FormControl('', Validators.required),
     description: new FormControl('', [Validators.required, Validators.minLength(10)]),
-    user: new FormControl('', Validators.required)
+    writer: new FormControl('', Validators.required)
   });
 
   constructor(
@@ -37,12 +37,12 @@ export class AddRecipeComponent implements OnInit {
   get name() { return this.createForm.get('name'); }
   get ingredients() { return this.createForm.get('ingredients'); }
   get description() { return this.createForm.get('description'); }
-  get user() { return this.createForm.get('user'); }
+  get writer() { return this.createForm.get('writer'); }
 
   submit() {
     if (!this.createForm.valid) { return; }
 
-    this.recipe = this.createForm.value; //console.log(this.pet);
+    this.recipe = this.createForm.value; console.log(this.recipe);
 
     this.recipeService.create(this.recipe).then(() => {
       console.log('Added new recipe successfully!');

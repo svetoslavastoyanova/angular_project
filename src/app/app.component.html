@@ -1,23 +1,24 @@
-
 <header>
     <nav class="nav">
         <ul class="nav-list-item">
-            <p class="logo-title">COOKER</p>
+            <!--<h1 class="logo-title">COOK</h1>
+            <h3 class="logo-subtitle">With Us</h3>-->
             <li class="nav-list">
-                <button mat-menu-item routerLink="/home"><mat-icon>account_circle</mat-icon>Home</button>
-                <button mat-menu-item routerLink="/home"><mat-icon>account_circle</mat-icon>Recipes</button>
-                <button mat-menu-item routerLink="add-recipe"><mat-icon>account_circle</mat-icon>Add Recipe</button>
+                <button mat-raised-button color="accent" routerLink="/home">Home</button>
+                <button mat-raised-button color="accent" routerLink="/recipes">Recipes</button>
+                <button mat-raised-button color="accent" routerLink="/add-recipe">Add Recipe</button>
             </li>
         
         </ul>
+        <h1 class="logo-title">COOK</h1>
+        <h2 class="logo-subtitle">WITH US</h2>
+
         <ul class="nav-list-items">
             <li class="nav-list-item">
-                
-                <button mat-menu-item routerLink="/login"><mat-icon>account_circle</mat-icon>Login</button>
-                <button mat-menu-item routerLink="/register"><mat-icon>account_circle</mat-icon>Register</button>
-                    <button mat-menu-item routerLink="/profile"><mat-icon>account_circle</mat-icon>Profile</button>
-                    <button mat-menu-item (click)="logout()"><mat-icon>logout</mat-icon>Logout</button>
-                
+                <button mat-raised-button color="accent" routerLink="/login">Login</button>
+                <button mat-raised-button color="accent" routerLink="/register">Register</button>
+                <button mat-raised-button color="accent" routerLink="/profile">Profile</button>
+                <button mat-raised-button color="accent" (click)="logout()">Logout</button>
             </li>
         </ul>
     </nav>
@@ -26,7 +27,8 @@
 
 <div class="content">
     <router-outlet></router-outlet>
-  </div>
+</div>
+
 
 <footer>
     <p>Svetoslava Stoyanova's exam project.</p>

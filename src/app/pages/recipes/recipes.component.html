@@ -1,1 +1,14 @@
-<p>recipes works!</p>
+<section class="recipes-container">
+  <h1 class="center">Look at all this nicely cooked meals!</h1>
+  <article class="recipe-articles" *ngIf="recipes">
+
+    <article class="recipe-article" *ngFor="let recipe of recipes">
+      <article class="recipe-article-image">
+        <img mat-card-image class="img-responsive gradient-border" alt=""[src]="recipe.photoURL ?? 'assets/meal.webp'"/>
+    </article>
+    <p>Description: {{recipe.description}} </p>
+    <p>Writer: {{recipe.writer}}</p>
+
+    </article>
+  </article>
+</section>

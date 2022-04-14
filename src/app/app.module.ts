@@ -28,6 +28,10 @@ import { AddRecipeComponent } from './pages/add-recipe/add-recipe.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { CommonModule } from '@angular/common';
 import { RecipesComponent } from './pages/recipes/recipes.component';
+import { MatCardModule } from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
 
 @NgModule({
   declarations: [
@@ -38,6 +42,8 @@ import { RecipesComponent } from './pages/recipes/recipes.component';
     ProfileComponent,
     AddRecipeComponent,
     RecipesComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -61,7 +67,9 @@ import { RecipesComponent } from './pages/recipes/recipes.component';
     FormsModule,
     ReactiveFormsModule,
     MatMenuModule,
-    CommonModule
+    CommonModule,
+    MatCardModule,
+    FlexLayoutModule
   ],
 
   providers: [],

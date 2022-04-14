@@ -4,5 +4,5 @@ export class Recipe {
     ingredients?: string[];
     description?: string;
     photoURL?: string;
-    user?: string;
+    writer?: string;
   }

@@ -24,3 +24,30 @@
     display: flex;
     gap: 16px;
   }
+
+.form-container{
+  margin: 20px auto;
+}
+
+.margin-top{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.update-profile{
+  color: #3DB0D9;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;;
+  text-shadow: 1px 1px 2px auto;
+  font-weight: bolder;
+}
+
+input{
+  color: #3DB0D9;
+}
+
+
+.row{
+  padding: 20px;
+}

@@ -1,8 +1,5 @@
-<div
-  class="form-container mat-elevation-z5 text-center"
-  *ngIf="user$ | async as user"
->
-  <h1>Update Profile</h1>
+<div class="form-container mat-elevation-z5 text-center"*ngIf="user$ | async as user">
+  <h1 class="update-profile">Update Profile</h1>
   <div class="profile-image">
     <img
       width="120"
@@ -48,9 +45,6 @@
 
     </div>
 
-
-    <button type="submit" class="margin-top" mat-raised-button color="primary">
-      Save
-    </button>
+    <button type="submit" class="margin-top" mat-raised-button color="accent">Save</button>
   </form>
 </div>

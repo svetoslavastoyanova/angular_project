@@ -47,9 +47,8 @@ const routes: Routes = [
   {
     path: 'recipes',
     component: RecipesComponent,
-    ...canActivate(redirectUnauthorizedToLogin),
     
-  }
+  },
   
 ];
 

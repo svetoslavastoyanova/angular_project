@@ -1,43 +1,45 @@
-<p>add-recipe works!</p>
 <div class="form-container mat-elevation-z1" *ngIf="user$ | async as user">
-    <form #addForm="ngForm" (ngSubmit)="submit()" [formGroup]="createForm">
-      <div *ngIf="!submitted">
-        <h2 class="center">Add new recipe</h2>
-        <mat-form-field>
-          <input formControlName="photoURL" matInput placeholder="Photo URL" type="text">
-          <mat-error *ngIf="photoURL?.errors?.['required']">Photo URL is required!</mat-error>
-          <mat-error *ngIf="photoURL?.errors">Photo URL should start with http or https!</mat-error>
-        </mat-form-field>
-        <mat-form-field>
-          <input formControlName="name" matInput placeholder="Name" type="text">
-          <mat-error *ngIf="name?.errors?.['required']">Name is required!</mat-error>
-          <mat-error *ngIf="name?.errors">Name should be at least 2 characters!</mat-error>
-        </mat-form-field>
-        
-        <mat-form-field>
-          <input formControlName="ingredients" matInput placeholder="Ingredients" type="text">
-          <mat-error *ngIf="ingredients?.errors?.['required']">Ingredients is required!</mat-error>
-        </mat-form-field>
-        <mat-form-field>
-          <input formControlName="description" matInput placeholder="Description" type="text">
-          <mat-error *ngIf="description?.errors?.['required']">Description is required!</mat-error>
-          <mat-error *ngIf="description?.errors">Description should be at least 50 characters!</mat-error>
-        </mat-form-field>
-
-        <button color="primary" mat-raised-button type="submit"><mat-icon>recipe</mat-icon>Add recipe</button>
+  <form #addForm="ngForm" (ngSubmit)="submit()" [formGroup]="createForm">
+    <div *ngIf="!submitted">
+      <h1 class="center">Add new recipe</h1>
+      <div class="mat-format">
+      <mat-form-field>
+        <input formControlName="photoURL" matInput placeholder="Photo URL" type="text">
+        <mat-error *ngIf="photoURL?.errors?.['required']">Photo URL is required!</mat-error>
+        <mat-error *ngIf="photoURL?.errors">Photo URL should start with http or https!</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="name" matInput placeholder="Name" type="text">
+        <mat-error *ngIf="name?.errors?.['required']">Name is required!</mat-error>
+        <mat-error *ngIf="name?.errors">Name should be at least 2 characters!</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="ingredients" matInput placeholder="Ingredients" type="text">
+        <mat-error *ngIf="ingredients?.errors?.['required']">Ingredients are required!</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="description" matInput placeholder="Description" type="text">
+        <mat-error *ngIf="description?.errors?.['required']">Description is required!</mat-error>
+        <mat-error *ngIf="description?.errors">Description should be at least 10 characters!</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="writer" matInput placeholder="Writer email" defaultValue="{{user?.email}}" type="text">
+        <mat-error *ngIf="writer?.errors?.['required']">User email is required!</mat-error>
+      </mat-form-field>
+    </div>
+    <button type="submit" class="add-recipe-button" mat-raised-button color="accent">Add</button>
+    </div>
+    <div *ngIf="submitted">
+      <h6 class="center">You've added this recipe successfully!</h6>
+      <div class="flex-btns">
+        <button (click)="newRecipe(); addForm.resetForm()" color="accent" mat-raised-button>
+          Add another one
+        </button>
+        <span class="center">or</span>
+        <button routerLink="/recipes" color="accent" mat-raised-button>
+          Check all recipes!
+        </button>
       </div>
-      <div *ngIf="submitted">
-        <h6 class="center">You've added this recipe successfully!</h6>
-        <div class="flex-btns">
-          <button (click)="newRecipe(); addForm.resetForm()" color="primary" mat-raised-button>
-            Add another one
-          </button>
-          <span class="center">or</span>
-          <button routerLink="/home" color="primary" mat-raised-button>
-            Browse all recipes
-          </button>
-        </div>
-      </div>
-    </form>
-  </div>
-  
+    </div>
+  </form>
+</div>
