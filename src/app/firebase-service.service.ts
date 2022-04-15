@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { AngularFireDatabase, AngularFireList } from "@angular/fire/compat/database";
 
-import { Recipe } from "./models/recipe.model"
+import { Recipe } from "./models/recipe.model";
 
 
 @Injectable({
@@ -12,9 +12,12 @@ export class FireBaseService {
 
   private dbPath = '/recipes';
 
+
   recipeRef: AngularFireList<Recipe>;
 
-  constructor(private db: AngularFireDatabase) {
+  constructor(
+    private db: AngularFireDatabase
+    ) {
     this.recipeRef = db.list(this.dbPath);
   }
 
@@ -22,8 +25,8 @@ export class FireBaseService {
     return this.recipeRef;
   }
 
-  create(pet: Recipe): any {
-    return this.recipeRef.push(pet);
+  create(recipe: Recipe): any {
+    return this.recipeRef.push(recipe);
   }
 
   update(key: string, value: any): Promise<void> {
@@ -37,4 +40,6 @@ export class FireBaseService {
   deleteAll(): Promise<void> {
     return this.recipeRef.remove();
   }
+
+
 }

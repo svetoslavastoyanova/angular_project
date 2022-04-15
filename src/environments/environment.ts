@@ -16,7 +16,7 @@ export const environment = {
   production: false,
 };
 
-//export const databasePath = 'https://reciepes-project-default-rtdb.firebaseio.com/recipes'
+export const dbPath = 'https://reciepes-project-default-rtdb.firebaseio.com/recipes'
 
 /*
  * For easier debugging in development mode, you can import the following file

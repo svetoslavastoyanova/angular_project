@@ -1,0 +1,98 @@
+.flex-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .mat-card {
+    border-radius: 0.5rem;
+  }
+  
+  .mat-card-header {
+    border-bottom: 1px solid var(--color-darkgray);
+  }
+  
+  .mat-card-image {
+    margin: 1rem 0 1rem 0 !important;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 5px;
+  }
+  
+  .mat-card-actions {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-self: flex-end;
+  }
+  
+  .mat-card-actions .mat-raised-button,
+  .mat-card-actions:not(.mat-card-actions-align-end) .mat-raised-button:first-child {
+    margin: 0;
+  }
+  
+  .details-container button.back .mat-icon {
+    height: 26px;
+  }
+  
+  .edit-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .edit-btn:hover::after {
+    content: "Edit";
+    font-size: .7rem;
+    position: absolute;
+    left: 25%;
+    bottom: -1.25rem;
+    white-space: pre;
+  }
+  
+  .delete-btn {
+    margin-left: .5rem;
+  }
+  
+  .delete-btn:hover::after {
+    content: "Delete";
+    font-size: .7rem;
+    position: absolute;
+    left: 10%;
+    bottom: -1.25rem;
+    white-space: pre;
+  }
+  
+  
+ .card{
+     width: 40%;
+     margin: 20px auto;
+ }
+
+mat-card-title{
+    text-align: center;
+    color: #3DB0D9;
+    margin-bottom: 20px;
+    padding: 20px;;
+    text-shadow: 1px 1px 2px auto;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 20px auto;
+}
+
+.lighter-text{
+    color: grey;
+    text-decoration: bold;
+}
+
+.image{
+    border-radius: 5px;
+}

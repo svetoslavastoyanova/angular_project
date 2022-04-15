@@ -5,10 +5,9 @@
     <article class="recipe-article" *ngFor="let recipe of recipes">
       <article class="recipe-article-image">
         <img mat-card-image class="img-responsive gradient-border" alt=""[src]="recipe.photoURL ?? 'assets/meal.webp'"/>
-    </article>
-    <p>Description: {{recipe.description}} </p>
-    <p>Writer: {{recipe.writer}}</p>
-
+      </article>
+      <p>Writer: {{recipe.writer}}</p>
+      <button mat-raised-button color="accent" routerLink="/details/{{recipe.key}}">Details</button>
     </article>
   </article>
 </section>

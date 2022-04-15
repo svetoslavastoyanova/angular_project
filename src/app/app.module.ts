@@ -30,6 +30,9 @@ import { CommonModule } from '@angular/common';
 import { RecipesComponent } from './pages/recipes/recipes.component';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { DetailsPageComponent } from './pages/details-page/details-page.component';
+
+
 
 
 
@@ -42,6 +45,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ProfileComponent,
     AddRecipeComponent,
     RecipesComponent,
+    DetailsPageComponent,
 
 
   ],

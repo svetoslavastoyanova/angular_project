@@ -12,10 +12,31 @@
     bottom: 0px;
     left: 0px;
 
-    height: 80%;
+    height: 70%;
     margin: 20px auto;
     top: 20px;
     width: 92%;
     border-radius: 5px;
     padding: 25px;
+}
+
+.greeting p{
+    font-size: 100px;
+    color: white;
+    position: relative;
+    text-align: center;
+    top: 155px;
+}
+
+.greeting .second{
+    font-size: 60px;
+    color: white;
+    position: relative;
+    text-align: center;
+    top: 200px;
+}
+
+.second a{
+    text-decoration: none;
+    color: #FF4081;
 }

@@ -6,6 +6,7 @@ import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo } from '@angula
 import { ProfileComponent } from "./pages/profile-page/profile-page.component";
 import { AddRecipeComponent } from "./pages/add-recipe/add-recipe.component";
 import { RecipesComponent } from "./pages/recipes/recipes.component";
+import { DetailsPageComponent } from "./pages/details-page/details-page.component";
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 const redirectLoggedInToHome = () => redirectLoggedInTo(['home']);
@@ -49,6 +50,10 @@ const routes: Routes = [
     component: RecipesComponent,
     
   },
+  {
+    path: 'details/:key',
+    component: DetailsPageComponent
+  }
   
 ];
 

@@ -8,7 +8,7 @@ import { Recipe } from "../../models/recipe.model";
 
 
 @Component({
-  selector: 'app-add-pet',
+  selector: 'app-add-recipe',
   templateUrl: './add-recipe.component.html',
   styleUrls: ['./add-recipe.component.css']
 })

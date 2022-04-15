@@ -12,5 +12,4 @@ export const environment = {
   production: true
 };
 
-
-//export const databasePath = 'https://reciepes-project-default-rtdb.firebaseio.com/recipes'
+export const dbPath = 'https://pet-shelter-e3a18-default-rtdb.europe-west1.firebasedatabase.app/pets';

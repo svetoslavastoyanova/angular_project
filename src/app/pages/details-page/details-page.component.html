@@ -1,0 +1,52 @@
+<div class="details-container">
+
+    <div class="cards">
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title class="title">{{ recipe?.name }}</mat-card-title>
+        </mat-card-header>
+  
+        <div class="flex-content">
+          <img mat-card-image class="image" alt=""
+               [src]="recipe?.photoURL ?? 'assets/meal.webpg'"
+          />
+          <div class="flex-column">
+            <mat-card-content>
+              <p><span class="lighter-text">Ingredients:</span> {{ recipe?.ingredients }}</p>
+              <p><span class="lighter-text">Description:</span> {{ recipe?.description }}</p>
+              <p><span class="lighter-text">Writer:</span> {{ recipe?.writer }}</p>
+             
+            </mat-card-content>
+  
+            <div *ngIf="editActive" class="edit-form">
+              <hr>
+              <h5 class="center">Update recipe</h5>
+              <form #editForm="ngForm" (ngSubmit)="updateRecipe()" [formGroup]="createForm">
+                <mat-form-field>
+                  <input formControlName="photoURL" matInput placeholder="Photo URL" value="`${recipe?.photoURL}`" type="text">
+                </mat-form-field>
+
+                <mat-form-field>
+                  <input formControlName="ingredients" matInput placeholder="Ingredients" type="text">
+                </mat-form-field>
+                <mat-form-field>
+                  <input formControlName="description" matInput placeholder="Description" type="text">
+                  <mat-error *ngIf="description?.errors">Description should be at least 10 characters!</mat-error>
+                </mat-form-field>
+                <button color="primary" mat-raised-button type="submit">Update Recipe</button>
+              </form>
+              <button mat-button color="primary" (click)="hideEditForm()">Hide edit form</button>
+            </div>
+  
+            <mat-card-actions *ngIf="user$ | async as user">
+
+              <span *ngIf="user?.email === recipe?.writer">
+                <button class="edit-btn" mat-icon-button color="accent" (click)="showEditForm()"><mat-icon>edit</mat-icon></button>
+                <button class="delete-btn" mat-icon-button color="accent" (click)="deleteRecipe()"><mat-icon>delete</mat-icon></button>
+              </span>
+            </mat-card-actions>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>

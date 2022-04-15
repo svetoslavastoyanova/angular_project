@@ -1,0 +1,20 @@
+.form-container{
+    width: 40%;
+    margin: 20px auto;
+
+}
+
+.title{
+    text-align: center;
+    color: #3DB0D9;
+    margin-bottom: 20px;
+    padding: 20px;;
+    text-shadow: 1px 1px 2px auto;
+    font-weight: bolder;
+}
+
+button{
+    position: relative;
+    left: 45%;
+    margin: 10px;
+}
